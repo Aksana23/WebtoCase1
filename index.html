@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web-to-Case Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.rocketmortgage.com%2Flearn%2Freal-property&psig=AOvVaw2EtkalNvsxSVCkL1OqmDdi&ust=1717609122948000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLiH1d6-woYDFQAAAAAdAAAAABAO');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://yourorg.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+        <label for="contact_name">Contact Name:</label>
+        <input type="text" id="contact_name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+        <input type="hidden" name="orgid" value="00Dxxxxxxxxxxxx">
+        <input type="hidden" name="retURL" value="https://yourdomain.com/thank-you">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
